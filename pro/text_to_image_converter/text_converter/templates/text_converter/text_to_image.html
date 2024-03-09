@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Text to Image Converter</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Generate Image</button>
+  </form>
+  {# Display the generated image if needed #}
+{% endblock %}
+
+return render(request, 'text_converter/text_to_image.html', {'form': form})
