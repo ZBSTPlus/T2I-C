@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>T2I Converter</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+</head>
+
+<body>
+
+  <form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+
+    <label class="input_text" id="input_text" name="input_text">Input Text:</label><br/>
+    <textarea class="text_area" rows=18 cols=100 id="input_text" name="input_text"></textarea><br/>
+
+    <div class="tools_container">
+      <label for="font_size">Font Size:</label>
+      <input class="form-control" type="number" id="font_size" name="font_size" value="20" min="1" max="100" />
+    </div>
+
+    <div class="tools_container">
+      <label class="font_family" for="font_family">Font Family:</label>
+      <select id="font_family" name="font_family">
+        <option value="Courier">Courier</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="Roboto">Roboto</option>
+        <option value="Tangerine">Tangerine</option>
+      </select>
+    </div>
+
+    <div class="color-selector tools_container">
+      <label for="font_color">Font Color:</label>
+      <input type="color" id="font_color" name="font_color" value="black" />
+    </div>
+
+    <div class="color-selectors tools_container">
+      <label for="background_color">Background Color:</label>
+      <input type="color" id="background_color" name="background_color" value="#FFFFFF" />
+    </div>
+
+    <button class="button">Create Image</button>
+
+    <div class="image-container">
+      {% if image_path %}
+      <img src="data:image/jpeg;base64, {{image_path}}" alt="Converted dot" />
+      {% endif %}
+    </div>
+
+  </form>
+  
+  <a class="download-button" id="download-button" href="{% url 'download_image' %}"
+  download="generated_image.png">Download Image</a>
+
+
+</body>
+
+</html>

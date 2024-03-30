@@ -1,0 +1,72 @@
+body{
+    margin: 50px;
+    background-color:#72FC01;
+    background-size: cover;
+}
+
+.input_text{
+    font-size: 36px;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.text_area{
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.tools_container{
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.button{
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+     /* Semi-transparent white border */
+    border-radius: 5px;
+    background-color: rgba(255,
+        255,
+        255,
+        0.3);
+    /* Semi-transparent white background */
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-container {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    /* Semi-transparent white border */
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    backdrop-filter: blur(5px);
+    margin-bottom: 25px;
+}
+
+.download-button{
+    padding: 10px 20px;
+    margin-top: 35px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    /* Semi-transparent white border */
+    border-radius: 5px;
+    background-color: rgba(255,
+        255,
+        255,
+        0.3);
+    /* Semi-transparent white background */
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
